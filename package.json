@@ -2,18 +2,16 @@
   "name": "hello-node",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/benmangold/hello-node.git"
-  },
-  "keywords": [],
   "author": "",
-  "bugs": {
-    "url": "https://github.com/benmangold/hello-node/issues"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
   },
-  "homepage": "https://github.com/benmangold/hello-node#readme"
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
 }
