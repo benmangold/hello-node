@@ -5,8 +5,6 @@ const port = 3000
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.listen(port, () => console.log(`saying hi on port ${port}!`))
-
     const { Client } = require('pg')
     const client = new Client()
     client.connect()
