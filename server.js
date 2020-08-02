@@ -6,3 +6,11 @@ const port = 3000
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.listen(port, () => console.log(`saying hi on port ${port}!`))
+
+    const { Client } = require('pg')
+    const client = new Client()
+    client.connect()
+    client.query('SELECT $1::text as message', ['Hello postgres!'], (err, res) => {
+      console.log(err ? err.stack : res.rows[0].message) // Hello World!
+      client.end()
+    })
