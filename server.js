@@ -11,4 +11,5 @@ app.get('/', (req, res) => res.send('Hello World!'))
     client.query('SELECT $1::text as message', ['Hello postgres!'], (err, res) => {
       console.log(err ? err.stack : res.rows[0].message) // Hello World!
       client.end()
+      err ? process.exit(1) : null
     })
